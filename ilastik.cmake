@@ -51,7 +51,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
             ${ilastik_SRC_DIR}/lazyflow/lazyflow/drtile
         # For some reason, python refuses to recognize the shared library unless it ends with .so.
         # Renaming it seems to do the trick
-        BUILD_COMMAND       ${BUILDEM_ENV_STRING} make && mv ${ilastik_SRC_DIR}/lazyflow/lazyflow/drtile/drtile.dylib ${ilastik_SRC_DIR}/lazyflow/lazyflow/drtile/drtile.so
+        BUILD_COMMAND       ${BUILDEM_ENV_STRING} make && mv ${ilastik_SRC_DIR}/lazyflow/lazyflow/drtile/drtile.so ${ilastik_SRC_DIR}/lazyflow/lazyflow/drtile/drtile.so
         TEST_COMMAND        ${BUILDEM_DIR}/bin/ilastik_headless_test
         INSTALL_COMMAND     ""
     )
