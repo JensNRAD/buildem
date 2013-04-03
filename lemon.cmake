@@ -33,6 +33,8 @@ ExternalProject_Add(${lemon_NAME}
         -DBUILD_SHARED_LIBS=ON
         -DCMAKE_INSTALL_PREFIX=${BUILDEM_DIR}
         -DCMAKE_PREFIX_PATH=${BUILDEM_DIR}
+	-DCMAKE_C_COMPILER=gcc	
+	-DCMAKE_CXX_COMPILER=g++	
         # Lemon can be optionally built with glpk to enable the LP solver.
         # We don't want to build with glpk because it isn't needed for cylemon.
         # Kill these cache variables to make sure we don't use it
